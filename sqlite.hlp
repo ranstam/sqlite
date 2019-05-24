@@ -1,0 +1,30 @@
+{smcl}
+{* 24feb2019}{...}
+{hline}
+help for {hi:sqlite} {right:manual:  {hi:[R] none}}
+{right:dialog:  {hi: none}    }
+{hline}
+
+{title:Syntax}
+
+{p 4 4 2}{cmd:sqlite} import {it:database} {it:"SQL-query"} or {cmd:sqlite} export {it:database} {it:table} {p_end}
+
+{title:Description}
+
+{p 4 4 2}{cmd:sqlite} is a simple ado-script that either imports data from an SQLite3 database by performing 
+an SQL query, or exports the data in the active memory into a table in an SQLite database. The import/export
+is based on executing a shell invoking SQLite3's internal functions. Data are temporarily stored in a csv file 
+(temp.csv), which is overwritten if it exists and deleted after use. {p_end}
+
+{title:Example}
+
+{p 4 4 2}{cmd:. sqlite import db.sqlite "SELECT * FROM hobby;}" {p_end}
+{p 4 4 2}{cmd:. sqlite export db.sqlite hobby} {p_end}
+
+{title:Author}
+
+{p 4 4 2}
+Jonas Ranstam {break}
+Mdas AB, Rotfruktsgatan 12B, Ystad, Sweden, {break}
+http://ranstam.eu, jonas.ranstam@gmail.com  {p_end}
+
