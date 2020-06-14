@@ -10,7 +10,7 @@
 *                 :       name when exporting                                  *
 *                 :                                                            *
 * Programmer      : Jonas Ranstam                                              *
-* Programmed date : 24.02.2019                                                 *
+* Programmed date : 14.06.2020                                                 *
 ********************************************************************************
 
 *! sqlite3 v1.0.0 JRanstam 24feb2019
