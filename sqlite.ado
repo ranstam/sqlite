@@ -22,7 +22,7 @@ program define sqlite
   
    if ("`mode'"=="import") {
       !sqlite3 -csv -header `dbname' "`sql'" > temp.csv
-      import delimited temp.csv, clear varnames(1)
+      import delimited temp.csv, delimiter(comma) varnames(1) clear 
       erase temp.csv
    } 
    else if ("`mode'"=="export") {
@@ -31,9 +31,7 @@ program define sqlite
          !echo -e "\n.import temp.csv `sql'" | sqlite3 -separator , `dbname'
       }
       if ("`c(os)'"=="Windows") {
-         display " "
-         display "This function is not available when running Stata under Windows."
-         display " "
+         !sqlite3 `dbname' ".mode csv" ".header on" ".import temp.csv `sql'"
       }
       erase temp.csv
    }  
